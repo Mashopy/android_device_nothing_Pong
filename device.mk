@@ -298,6 +298,9 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libstagefrighthw
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Qssi overlays
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
