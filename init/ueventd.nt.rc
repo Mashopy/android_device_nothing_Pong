@@ -1,11 +1,12 @@
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2023-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 # Charger
-/sys/class/qcom-battery    charging_en    0660    system  system
+/sys/class/qcom-battery    charging_en          0660    system  system
+/sys/class/qcom-battery    wireless_boost_en    0660    system  system
 
 # NFC
 /dev/pn553    0660    nfc               nfc
