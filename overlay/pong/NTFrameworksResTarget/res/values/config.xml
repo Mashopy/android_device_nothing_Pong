@@ -214,7 +214,7 @@
     <integer name="config_shutdownBatteryTemperature">600</integer>
 
     <!-- Type of the tap sensor. Empty if tap is not supported. -->
-    <string translatable="false" name="config_dozeTapSensorType">com.google.sensor.single_touch</string>
+    <string name="config_dozeTapSensorType" translatable="false">org.lineageos.sensor.single_touch</string>
 
     <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
     <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
