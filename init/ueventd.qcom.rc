@@ -564,3 +564,6 @@ subsystem mem_buf_vm
 
 #power_state device node
 /dev/power_state           0660   system      system
+
+#Virtualization Attributes
+/dev/gunyah                 0666   root     root
