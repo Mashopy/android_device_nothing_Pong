@@ -22,3 +22,7 @@ persist.sys.fuse.passthrough.enable=true
 
 # GMS
 ro.opa.eligible_device=true
+
+# RKPD
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
