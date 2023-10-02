@@ -298,6 +298,16 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libstagefrighthw
 
+# Qssi overlays
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    FrameworksResCommon \
+    SystemUIResCommon \
+    TelephonyResCommon \
+    UwbResCommon \
+    WifiResMainlineCommon \
+    WifiResCommon
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 

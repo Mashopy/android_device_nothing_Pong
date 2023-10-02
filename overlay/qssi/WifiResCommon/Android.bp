@@ -1,0 +1,15 @@
+//
+// Copyright (C) 2023 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "WifiResMainlineCommon",
+    manifest: "MainlineAndroidManifest.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResCommon",
+    product_specific: true,
+}
