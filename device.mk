@@ -313,6 +313,15 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     WifiResTarget
 
+# Pong overlays
+PRODUCT_PACKAGES += \
+    NTCarrierConfigResTarget \
+    NTFrameworksResTarget \
+    NTSettingsResTarget \
+    NTSystemUIResTarget \
+    NTWifiResMainlineTarget \
+    NTWifiResTarget
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
