@@ -216,6 +216,9 @@
     <!-- Type of the tap sensor. Empty if tap is not supported. -->
     <string translatable="false" name="config_dozeTapSensorType">com.google.sensor.single_touch</string>
 
+    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
+
     <!-- Default files to pin via Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/apex/com.android.art/javalib/arm64/boot.oat"</item>
