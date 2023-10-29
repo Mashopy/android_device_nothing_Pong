@@ -11,4 +11,7 @@
     <!-- Max network scan search time in seconds -->
     <integer name="config_network_scan_helper_max_search_time_sec">254</integer>
 
+    <!-- The Enrollment Progress bar for UDFPS sensor in pixels -->
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">96</integer>
+
 </resources>
