@@ -302,7 +302,8 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service.pn8x \
+    android.hardware.nfc-service.nxp \
+    android.hardware.nfc@1.2.vendor \
     android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     Tag
@@ -420,9 +421,7 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    vendor/nxp/nfc \
-    vendor/nxp/secure_element
+    $(LOCAL_PATH)
 
 # Telephony
 PRODUCT_PACKAGES += \
