@@ -11,5 +11,5 @@ runtime_resource_overlay {
 
 runtime_resource_overlay {
     name: "WifiResCommon",
-    product_specific: true,
+    vendor: true,
 }
