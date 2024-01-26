@@ -240,6 +240,8 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /mnt/vendor/persist/hexlp 0770 media media
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
@@ -401,6 +403,9 @@ on post-fs-data
 
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
+
+    # Create hexlp directory
+    mkdir /data/vendor/hexlp 0770 media media
 
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
