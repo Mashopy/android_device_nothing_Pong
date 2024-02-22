@@ -398,6 +398,31 @@
          -->
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">M454.0, 0.0 h 86.0 v 126 h -86.0 Z @left</string>
 
+    <!-- Maximum color temperature, in Kelvin, supported by Night display. -->
+    <string-array name="config_nightDisplayColorTemperatureCoefficients">
+       <item>0.0000000000</item>
+       <item>0.0000000000</item>
+       <item>1.0000000000</item>
+       <item>0.0000000000</item>
+       <item>0.0001636364</item>
+       <item>0.3352000000</item>
+       <item>0.0000000000</item>
+       <item>0.0003496503</item>
+       <item>-0.4376923077</item>
+    </string-array>
+
+    <string-array name="config_nightDisplayColorTemperatureCoefficientsNative">
+       <item>0.0000000000</item>
+       <item>0.0000000000</item>
+       <item>1.0000000000</item>
+       <item>0.0000000000</item>
+       <item>0.0001636364</item>
+       <item>0.3352000000</item>
+       <item>0.0000000000</item>
+       <item>0.0003496503</item>
+       <item>-0.4376923077</item>
+    </string-array>
+
     <!-- When each intermediate UDFPS enroll stage ends, as a fraction of total progress. -->
     <string-array name="config_udfps_enroll_stage_thresholds" translatable="false">
         <item>0.25</item>
