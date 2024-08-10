@@ -13,6 +13,9 @@
 # Powershare
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.nt\.pong     u:object_r:hal_lineage_powershare_default_exec:s0
 
+# Partitions
+/dev/block/platform/soc/1d84000\.ufshc/by-name/vbmeta_vendor_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors@[0-9]\.[0-9]-service\.nt\.pong-multihal      u:object_r:hal_sensors_default_exec:s0
 
