@@ -326,11 +326,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     nt-fwk.pong
 
-# OMX
-PRODUCT_PACKAGES += \
-    libOmxCore \
-    libstagefrighthw
-
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
