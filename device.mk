@@ -242,6 +242,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     nt-fwk.pong
 
+# NT-glyph
+PRODUCT_PACKAGES += \
+    PongGlyph
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
