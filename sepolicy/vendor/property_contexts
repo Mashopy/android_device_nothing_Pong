@@ -2,9 +2,11 @@
 ro.vendor.camera.res.       u:object_r:vendor_camera_prop:s0
 
 # Dirac
-persist.vendor.dirac.     u:object_r:vendor_audio_prop:s0
-ro.vendor.dirac.          u:object_r:vendor_audio_prop:s0
-vendor.dirac.             u:object_r:vendor_audio_prop:s0
+persist.vendor.dirac.       u:object_r:vendor_audio_prop:s0
+persist.vendor.newAAC.      u:object_r:vendor_audio_prop:s0
+persist.vendor.newdirac.    u:object_r:vendor_audio_prop:s0
+ro.vendor.dirac.            u:object_r:vendor_audio_prop:s0
+vendor.dirac.               u:object_r:vendor_audio_prop:s0
 
 # Fingerprint
 persist.vendor.overlay.fp_model      u:object_r:vendor_fingerprint_prop:s0
