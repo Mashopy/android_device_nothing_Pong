@@ -9,5 +9,8 @@
 /sys/class/qcom-battery    wireless_boost_en    0660    system  system
 /sys/class/qcom-battery    wls_reverse_status   0660    system  system
 
+# LEDs
+/dev/led_strips             0660   system       system
+
 # NFC
 /dev/pn553    0660    nfc               nfc
