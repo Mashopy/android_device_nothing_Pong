@@ -1,5 +1,5 @@
 # Charger
-genfscon sysfs /class/qcom-battery/charging_en          u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /class/qcom-battery/scenario_fcc         u:object_r:vendor_sysfs_usb_supply:s0
 genfscon sysfs /class/qcom-battery/wireless_boost_en    u:object_r:vendor_sysfs_wireless:s0
 genfscon sysfs /class/qcom-battery/wls_reverse_status   u:object_r:vendor_sysfs_wireless:s0
 
