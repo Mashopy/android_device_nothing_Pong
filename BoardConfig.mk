@@ -91,8 +91,6 @@ TARGET_KERNEL_EXT_MODULES := \
 TARGET_SUPPORTS_OMX_SERVICE := false
 
 # Partitions
-AB_OTA_UPDATER := true
-
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
