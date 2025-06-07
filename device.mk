@@ -274,6 +274,10 @@ PRODUCT_PACKAGES += \
     NTWifiResMainlineTarget \
     NTWifiResTarget
 
+# NCM overlays
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
