@@ -13,8 +13,7 @@
 /vendor/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.nt\.pong    u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
 # NFC
-/dev/pn553                                                    u:object_r:nfc_device:s0
-/vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.nxp       u:object_r:hal_nfc_default_exec:s0
+/dev/pn553     u:object_r:nfc_device:s0
 
 # Powershare
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.nt\.pong     u:object_r:hal_lineage_powershare_default_exec:s0
