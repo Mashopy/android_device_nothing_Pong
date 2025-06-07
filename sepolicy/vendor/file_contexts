@@ -15,9 +15,6 @@
 # NFC
 /dev/pn553     u:object_r:nfc_device:s0
 
-# Powershare
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.powershare@1\.0-service\.nt\.pong     u:object_r:hal_lineage_powershare_default_exec:s0
-
 # Partitions
 /dev/block/platform/soc/1d84000\.ufshc/by-name/vbmeta_vendor_[ab]          u:object_r:vendor_custom_ab_block_device:s0
 
