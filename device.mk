@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
     audio.r_submix.default \
+    audio.primary.taro \
     audio.usbv2.default \
     audioadsprpcd \
     libagm_compress_plugin \
@@ -56,10 +57,9 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libtinycompress \
     libvolumelistener \
-    vendor.qti.hardware.AGMIPC@1.0-service \
-    vendor.qti.hardware.pal@1.0-impl
+    sound_trigger.primary.taro \
+    vendor.qti.hardware.AGMIPC@1.0-service
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
 
@@ -86,6 +86,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
@@ -418,10 +423,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/nothing/Pong/framework_manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := \
-    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
-    $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
-    $(LOCAL_PATH)/manifest_cape.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest_cape.xml
 
 # WiFi
 PRODUCT_PACKAGES += \
