@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "android_kernel_nothing_sm8475",
+    "target_path": "kernel/nothing/sm8475"
+  },
+  {
+    "repository": "android_kernel_nothing_sm8475-devicetrees",
+    "target_path": "kernel/nothing/sm8475-devicetrees"
+  },
+  {
+    "repository": "android_kernel_nothing_sm8475-modules",
+    "target_path": "kernel/nothing/sm8475-modules"
+  }
+]
