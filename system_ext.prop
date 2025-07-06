@@ -1,7 +1,3 @@
-# Audio
-ro.audio.ihaladaptervendorextension_enabled=true
-ro.qc.sdk.audio.fluencetype=none
-
 # Bluetooth
 bluetooth.hfp.codec_aptx_voice.enabled=true
 bluetooth.hfp.swb.aptx.power_management.enabled=true
