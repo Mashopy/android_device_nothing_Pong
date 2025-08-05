@@ -1,0 +1,28 @@
+aidl_interface {
+    name: "vendor.noth.hardware.charge",
+    system_ext_specific: true,
+    vendor_available: true,
+    local_include_dir: "aidl",
+    srcs: ["aidl/vendor/noth/hardware/charge/*.aidl"],
+    stability: "vintf",
+    owner: "noth",
+
+    backend: {
+        cpp: {
+            enabled: true,
+        },
+        ndk: {
+            gen_log: true,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+    frozen: true,
+}
