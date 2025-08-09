@@ -188,6 +188,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
+    init.kernel.post_boot.sh \
     init.nt.hw.rc \
     init.nt.hw.rc.recovery \
     init.nt.rc \
