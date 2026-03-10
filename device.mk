@@ -313,10 +313,6 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-battery/wireless_boost_en)
 
-# QTI fwk-detect
-PRODUCT_PACKAGES += \
-    libvndfwk_detect_jni.qti_vendor # Needed by CNE app
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.nt.pong-multihal \
