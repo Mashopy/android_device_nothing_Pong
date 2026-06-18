@@ -6,24 +6,6 @@
 
 DEVICE_PATH := device/nothing/Pong
 
-# A/B
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    odm \
-    product \
-    recovery \
-    system \
-    system_ext \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor \
-    vendor \
-    vendor_boot \
-    vendor_dlkm
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
@@ -45,16 +27,6 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := taro
 
-# Boot
-BOARD_BOOT_HEADER_VERSION := 4
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_RAMDISK_USE_LZ4 := true
-
-# DTB / DTBO
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
-TARGET_NEEDS_DTBOIMAGE := true
-
 # Display
 SOONG_CONFIG_qtidisplay_udfps := true
 TARGET_SCREEN_DENSITY := 420
@@ -68,10 +40,18 @@ BOARD_BOOTCONFIG := \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3
 
-BOARD_USES_GENERIC_KERNEL_IMAGE := true
+BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
+
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
 BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
+BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+TARGET_NEEDS_DTBOIMAGE := true
 
 TARGET_KERNEL_SOURCE := kernel/nothing/sm8475
 TARGET_KERNEL_CONFIG := \
@@ -80,7 +60,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/nothing/waipio_GKI.config \
     vendor/debugfs.config
 
-# Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
@@ -111,37 +90,57 @@ TARGET_KERNEL_EXT_MODULES := \
 # Media
 TARGET_SUPPORTS_OMX_SERVICE := false
 
-# Metadata
+# Partitions
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    odm \
+    product \
+    recovery \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor \
+    vendor \
+    vendor_boot \
+    vendor_dlkm
+
 BOARD_USES_METADATA_PARTITION := true
 
-# Platform
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := taro
-
-# Partitions
-BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
--include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
+BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 241547554816
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
+
+BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
+BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
+BOARD_SUPER_PARTITION_SIZE := 7516192768
+BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 7512998464 # (BOARD_SUPER_PARTITION_SIZE - 4MB)
+
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 7512998464 # (BOARD_SUPER_PARTITION_SIZE - 4MB)
-BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
-BOARD_SUPER_PARTITION_SIZE := 7516192768
-BOARD_FLASH_BLOCK_SIZE := 131072
+
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
+
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := taro
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
