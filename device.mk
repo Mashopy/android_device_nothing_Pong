@@ -213,7 +213,10 @@ PRODUCT_COPY_FILES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.nt.pong
+    vendor.lineage.livedisplay-service.sysfs
+
+$(call soong_config_set_bool,livedisplay_sysfs,enable_se,true)
+$(call soong_config_set,livedisplay_sysfs,se_path,/sys/panel_feature/hbm_mode)
 
 # Lineage Health
 PRODUCT_PACKAGES += \
