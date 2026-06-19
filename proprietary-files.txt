@@ -1086,8 +1086,6 @@ vendor/lib64/libgf_hal.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
 # Fingerprint firmware
-vendor/firmware/goodix_cfg_group.bin
-vendor/firmware/goodix_firmware.bin
 vendor/firmware/goodixfp64.b00
 vendor/firmware/goodixfp64.b01
 vendor/firmware/goodixfp64.b02
@@ -1915,7 +1913,8 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Touchscreen firmware
-vendor/firmware/novatek_spi_fw.bin
+vendor/firmware/goodix_cfg_group.bin
+vendor/firmware/goodix_firmware.bin
 
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
