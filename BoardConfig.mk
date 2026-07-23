@@ -87,9 +87,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/video-driver \
     qcom/opensource/wlan/qcacld-3.0/.qca6490
 
-# Media
-TARGET_SUPPORTS_OMX_SERVICE := false
-
 # Partitions
 AB_OTA_PARTITIONS += \
     boot \
