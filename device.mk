@@ -260,22 +260,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
-# Qssi overlays
-PRODUCT_PACKAGES += \
-    CarrierConfigResCommon \
-    FrameworksResCommon \
-    SystemUIResCommon \
-    TelephonyResCommon \
-    UwbResCommon \
-    WifiResMainlineCommon \
-    WifiResCommon
-
-# Taro overlays
-PRODUCT_PACKAGES += \
-    FrameworksResTarget \
-    WifiResTarget
-
-# Pong overlays
 PRODUCT_PACKAGES += \
     NTCarrierConfigResTarget \
     NTFrameworksResTarget \
@@ -283,10 +267,10 @@ PRODUCT_PACKAGES += \
     NTSettingsProviderResTarget \
     NTSettingsResTarget \
     NTSystemUIResTarget \
-    NTWifiResMainlineTarget \
+    NTTelephonyResTarget \
+    NTUwbResTarget \
     NTWifiResTarget
 
-# NCM overlays
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
