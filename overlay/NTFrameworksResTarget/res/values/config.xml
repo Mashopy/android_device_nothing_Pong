@@ -570,7 +570,7 @@
     <integer name="config_pinnerHomePinBytes">6291456</integer>
 
     <!-- Colon separated list of package names that should be granted Notification Listener access -->
-    <string name="config_defaultListenerAccessPackages" translatable="false">org.lineageos.glyph</string>
+    <string name="config_defaultListenerAccessPackages" translatable="false">co.aospa.glyph</string>
 
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>

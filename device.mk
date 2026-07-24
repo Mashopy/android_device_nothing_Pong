@@ -150,6 +150,10 @@ PRODUCT_PACKAGES += \
 # Generic ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
+# Glyph
+PRODUCT_PACKAGES += \
+    ParanoidGlyphPhone2
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
@@ -243,16 +247,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
-# NT-fwk
-PRODUCT_PACKAGES += \
-    nt-fwk.pong
-
-PRODUCT_BOOT_JARS += \
-    nt-fwk.pong
-
-# NT-glyph
-PRODUCT_PACKAGES += \
-    PongGlyph
+# NT framework
+$(call inherit-product, hardware/nothing/nt-fwk/nt-fwk.mk)
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -328,7 +324,8 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/nothing
 
 # Telephony
 PRODUCT_PACKAGES += \
