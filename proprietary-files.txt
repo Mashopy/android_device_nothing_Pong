@@ -1220,11 +1220,6 @@ vendor/etc/public.libraries.txt
 vendor/lib64/libQnnHtp.so
 vendor/lib64/libQnnHtpV69Stub.so
 
-# NFC
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-nxp.conf
-vendor/libnfc-nxp_RF.conf
-
 # NFC firmware
 vendor/lib64/libpn560_fw.so
 
