@@ -14,7 +14,7 @@
 /sys/devices/platform/soc/994000.i2c/i2c-0/0-003a/leds/led_strips(/.*)?      u:object_r:sysfs_leds:s0
 
 # NFC
-/dev/pn553     u:object_r:nfc_device:s0
+/dev/nxp-nci    u:object_r:nfc_device:s0
 
 # Partitions
 /dev/block/platform/soc/1d84000\.ufshc/by-name/vbmeta_vendor_[ab]          u:object_r:vendor_custom_ab_block_device:s0

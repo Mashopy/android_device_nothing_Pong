@@ -13,4 +13,4 @@
 /dev/led_strips             0660   system       system
 
 # NFC
-/dev/pn553    0660    nfc               nfc
+/dev/nxp-nci    0660    nfc               nfc
