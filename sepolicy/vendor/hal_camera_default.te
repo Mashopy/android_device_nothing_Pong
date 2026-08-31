@@ -1,5 +1,3 @@
-add_service(hal_camera_default, hal_nt_camera_aidl_service)
-
 allow hal_camera_default fwk_camera_hwservice:hwservice_manager find;
 
 binder_call(hal_camera_default, hal_camera_default)

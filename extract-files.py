@@ -93,16 +93,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
-    ('vendor/lib64/libarcsoft_dark_vision_raw.so', 'vendor/lib64/libarcsoft_high_dynamic_range_v5.so'): blob_fixup()
-        .clear_symbol_version('remote_handle_close')
-        .clear_symbol_version('remote_handle_invoke')
-        .clear_symbol_version('remote_handle_open')
-        .clear_symbol_version('remote_register_buf_attr')
-        .clear_symbol_version('remote_register_buf'),
     'vendor/lib64/libcamximageformatutils.so': blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V2-ndk_platform.so', 'vendor.qti.hardware.display.config-V2-ndk.so'),
-    ('vendor/lib64/libntcamallocator.so', 'vendor/lib64/vendor.noth.hardware.camera-service-impl.so'): blob_fixup()
-        .add_needed('libui_shim.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     'vendor/lib64/libmorpho_video_stabilizer.so': blob_fixup()
