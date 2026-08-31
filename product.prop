@@ -17,5 +17,8 @@ ro.audio.monitorRotation=true
 # Camera
 ro.camerax.extensions.enabled=true
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # GMS
 ro.opa.eligible_device=true
