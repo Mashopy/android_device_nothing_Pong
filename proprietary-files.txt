@@ -1220,8 +1220,8 @@ vendor/etc/public.libraries.txt
 vendor/lib64/libQnnHtp.so
 vendor/lib64/libQnnHtpV69Stub.so
 
-# NFC firmware
-vendor/lib64/libpn560_fw.so
+# NFC firmware - from NXP NFC_AR_00_7E800_17.07.00_OpnSrc - FW version 01.01.49
+vendor/lib64/libsn220u_fw.so:vendor/lib64/libpn560_fw.so|514f0d5da39d62d9a24b88ba9e69efcbd4ed0b4a
 
 # Nothing charge
 vendor/bin/hw/vendor.noth.hardware.charge-service
